@@ -1,3 +1,4 @@
+// JS snippit for making nested accordion links.
 
 $('.toggle').click(function(e) {
   	e.preventDefault();
@@ -14,4 +15,11 @@ $('.toggle').click(function(e) {
     }
 });
 
-
+//Hide all the hidables when the page loads.
+$(document).ready(function() {
+    $('.inner').each(function() {
+        var $this = $(this);
+        $this.removeClass("show");
+        $this.slideUp(350);
+    });
+});
