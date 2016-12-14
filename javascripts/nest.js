@@ -1,8 +1,8 @@
+
 $('.toggle').click(function(e) {
   	e.preventDefault();
   
     var $this = $(this);
-  
     if ($this.next().hasClass('show')) {
         $this.next().removeClass('show');
         $this.next().slideUp(350);
@@ -13,3 +13,5 @@ $('.toggle').click(function(e) {
         $this.next().slideToggle(350);
     }
 });
+
+
