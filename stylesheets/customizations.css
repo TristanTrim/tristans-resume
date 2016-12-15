@@ -1,0 +1,13 @@
+
+
+.toggle {
+    //color: yellow;
+    border: 1px solid #ffcc00; /* Nice amber colour */
+    border-radius: 4px;
+    padding: 2px;
+}
+.toggle:hover {
+    background-color: #bd9900; /* Nice, less intense, amber colour */
+    color: black;
+}
+
