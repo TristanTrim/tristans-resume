@@ -1,27 +1,33 @@
 // JS snippit for making nested accordion links.
 
+function open(element) {
+        element.parent().parent().find('li .inner').removeClass('show');
+        element.parent().parent().find('li .inner').slideUp(450);
+        element.next().toggleClass('show');
+        element.next().slideToggle(350);
+        element.context.style.borderBottomStyle="none";
+}
+function close(element) {
+        element.next().removeClass('show');
+        element.next().slideUp(450);
+        element.context.style.borderBottomStyle="solid";
+}
+
 $('.toggle').click(function(e) {
   	e.preventDefault();
   
     var $this = $(this);
     if ($this.next().hasClass('show')) {
-        $this.next().removeClass('show');
-        $this.next().slideUp(450);
-        $this.context.style.borderBottomStyle="solid";
+      close($this);
     } else {
-        $this.parent().parent().find('li .inner').removeClass('show');
-        $this.parent().parent().find('li .inner').slideUp(450);
-        $this.next().toggleClass('show');
-        $this.next().slideToggle(350);
-        $this.context.style.borderBottomStyle="none";
+      open($this);
     }
 });
 
 //Hide all the hidables when the page loads.
 $(document).ready(function() {
-    $('.inner').each(function() {
+    $('.toggle').each(function() {
         var $this = $(this);
-        $this.removeClass("show");
-        $this.slideUp(350);
+        close($this);
     });
 });
