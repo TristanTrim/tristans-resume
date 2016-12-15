@@ -1,13 +1,18 @@
 
+/* #ffcc00 is the nice amber colour used for links elsewhere.
+   #bd9900 is the less intense version.
+*/
 
 .toggle {
     //color: yellow;
-    border: 1px solid #ffcc00; /* Nice amber colour */
-    border-radius: 4px;
+    border: 1px solid #bd9900;
+    border-radius: 6px;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
     padding: 2px;
 }
 .toggle:hover {
-    background-color: #bd9900; /* Nice, less intense, amber colour */
+    background-color: #bd9900;
     color: black;
 }
 
