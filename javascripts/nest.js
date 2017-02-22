@@ -27,7 +27,11 @@ $('.toggle').click(function(e) {
 //Hide all the hidables when the page loads.
 $(document).ready(function() {
     $('.toggle').each(function() {
-        var $this = $(this);
-        close($this);
+        console.log($(this));
+        if ($(this).context.classList.contains("stayOpen")){
+          $(this).next().toggleClass('show');
+        } else {
+          close($(this));
+        }
     });
 });
