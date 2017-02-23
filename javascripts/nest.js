@@ -30,6 +30,7 @@ $(document).ready(function() {
         console.log($(this));
         if ($(this).context.classList.contains("stayOpen")){
           $(this).next().toggleClass('show');
+          $(this).context.style.borderBottomStyle="none";
         } else {
           close($(this));
         }
